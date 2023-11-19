@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ShowBooksByGenreController"
+      alignment="center"
+      spacing="10"   
+      styleClass="root">
+      
+    <Label text = "Genres:"/>   
+    <ListView fx:id = "genresLv" prefHeight="50" prefWidth="100" items = "${controller.catalogue.genres}"/> <!-- Display List of Genre -->
+  
+    <Button text = "Display" onAction = "#handleDisplay"/>  <!-- Button to Pick Genre -->
+    
+    <Label text = "Books in Selected Genre:"/>   
+    <ListView fx:id = "booksLv" prefHeight="100" prefWidth="250"/>  <!-- Display Book -->
+    
+    <Button text = "Close" onAction = "#handleExit"/>  <!-- Exit -->
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

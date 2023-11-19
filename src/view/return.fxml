@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ReturnController"
+      alignment="center"
+      spacing="10"   
+      styleClass="root">
+
+    <HBox spacing = "10" alignment="CENTER_RIGHT"> <!-- HBox display fields to enter Patron Details -->
+        <Label text = "Patron ID:"/>
+        <TextField fx:id = "patronTf"/>
+        <Button fx:id = "patronBtn" text = "Select Patron" onAction = "#handlePatron"/>
+    </HBox>
+    
+    <Label text = "Borrowed Books:"/>
+    <ListView fx:id = "booksLv" prefHeight="100" prefWidth="350"/> <!-- Display List Of Books -->
+    <Button fx:id = "returnBtn" text = "Return Selected Book" onAction = "#handleBook"/> <!-- Press When Book is selected -->
+    <Button text = "Close" onAction = "#handleExit"/> <!-- Exit Page -->
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
