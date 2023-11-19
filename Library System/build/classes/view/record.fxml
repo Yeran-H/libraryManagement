@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.RecordController"
+      alignment="center"
+      spacing = "10"  
+      styleClass="root">
+
+    <HBox spacing="10" alignment="CENTER_RIGHT"> <!-- HBox to enter Patron Details -->
+        <Label text = "Patron ID:"/>
+        <TextField fx:id = "patronTf"/>
+        <Button fx:id = "showBtn" text = "Show Record" onAction = "#handleRecord"/>
+    </HBox>
+    
+    <Text fx:id = "selectedTxt" text = "No Patron Selected"/> <!-- Display Message of Patron -->
+    <Label text = "Currently Borrowed Books:"/>
+    <ListView fx:id = "currentLv" prefWidth = "300" prefHeight="100" /> <!-- Display Current Books -->
+    <Label text = "Borrowing History:"/>
+    <ListView fx:id = "historyLv" prefWidth = "300" prefHeight="100" /> <!-- Display History Books -->
+    <Button text = "Close" onAction = "#handleExit"/> <!-- Exit Page -->
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.PlaceHoldController"
+      alignment="center"
+      spacing="10"   
+      styleClass="root">
+
+    <HBox spacing = "10" alignment="CENTER_RIGHT"> <!-- Display Fields to enter Patron details -->
+        <Label text = "Patron ID:"/>
+        <TextField fx:id = "patronTf"/>
+        <Button fx:id = "patronBtn" text = "Select Patron" onAction = "#handlePatron"/>
+    </HBox>
+    
+    <Label text = "Books:"/>
+    <ListView fx:id = "booksLv" prefHeight="100" prefWidth="350"/> <!-- Display list of Books -->
+    <Button fx:id = "holdBtn" text = "Hold Selected Book" onAction = "#handleHold"/> <!-- Start Hold Method -->
+    <Text fx:id = "holdTxt" styleClass = "feedbackTxt"/> <!-- Display What is happenig -->
+    <Button text = "Close" onAction = "#handleExit"/> <!-- Exit Page -->
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
+

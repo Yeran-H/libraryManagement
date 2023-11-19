@@ -1,0 +1,29 @@
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.FavouritesController"
+      spacing = "10"
+      alignment="center"  
+      styleClass="root">
+
+    <HBox spacing="10" alignment="CENTER_RIGHT"> <!-- HBox to enter Patron Details -->
+        <Label text = "Patron ID:"/>
+        <TextField fx:id = "patronTf"/>
+        <Button fx:id = "showBtn" text = "Show Favourites" onAction="#handleFavourities" />
+    </HBox>
+    
+    <Text fx:id = "selectedTxt" text = "No Patron Selected"/> <!-- Display Message of Patron -->
+    <ListView fx:id = "booksLv" prefWidth = "300" prefHeight="100" /> <!-- Display Books -->
+    <Button text = "Close" onAction = "#handExit"/> <!-- Exit Page -->
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
+

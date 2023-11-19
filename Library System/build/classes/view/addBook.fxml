@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.AddBookController"
+      alignment="center"
+      spacing="10"   
+      styleClass="root">
+    
+    <GridPane alignment = "CENTER" hgap = "10" vgap = "10"> <!-- Display the input Grid Pane for user to enter Book Details -->
+        <Label text = "Title:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id = "titleTf" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text = "Author:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id = "authorTf" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text = "Genre:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id = "genreTf" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+    
+    <Text fx:id = "addTxt" styleClass = "feedbackTxt"/> <!-- Display Message if it is added or not -->
+    <Button text = "Add Book" onAction = "#handleAdd"/> <!-- Add Button -->
+    <Button text = "Close" onAction="#handleExit"/> <!-- Exit Button -->
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
